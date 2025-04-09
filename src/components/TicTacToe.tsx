@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
+import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './theme/ThemeToggle';
 import GameBoard from './GameBoard';
 import GameStatus from './GameStatus';
 import ScoreBoard from './ScoreBoard';
-import { Button } from '@/components/ui/button';
-import { toast } from 'sonner';
 
 const TicTacToe: React.FC = () => {
   const [board, setBoard] = useState<(string | null)[]>(Array(9).fill(null));
@@ -84,6 +86,9 @@ const TicTacToe: React.FC = () => {
 
   return (
     <div className="max-w-md mx-auto p-4">
+      <div className="flex justify-end mb-4">
+        <ThemeToggle />
+      </div>
       <ScoreBoard scores={scores} />
       <GameStatus 
         currentPlayer={currentPlayer} 
