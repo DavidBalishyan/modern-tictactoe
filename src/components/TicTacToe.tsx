@@ -85,8 +85,8 @@ const TicTacToe: React.FC = () => {
   const isDraw = !winner && board.every(cell => cell !== null);
 
   return (
-    <div className="max-w-md mx-auto p-4">
-      <div className="flex justify-end mb-4">
+    <div className="max-w-md mx-auto p-4 relative">
+      <div className="absolute top-4 right-4">
         <ThemeToggle />
       </div>
       <ScoreBoard scores={scores} />
@@ -113,3 +113,4 @@ const TicTacToe: React.FC = () => {
 };
 
 export default TicTacToe;
+
