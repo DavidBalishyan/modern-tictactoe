@@ -4,7 +4,7 @@ import GameBoard from './GameBoard';
 import GameStatus from './GameStatus';
 import ScoreBoard from './ScoreBoard';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 const TicTacToe: React.FC = () => {
   const [board, setBoard] = useState<(string | null)[]>(Array(9).fill(null));
