@@ -1,9 +1,13 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import TicTacToe from '@/components/TicTacToe';
 import { Grid2X2 } from 'lucide-react';
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "A modern game of Tic Tac Toe";
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-slate-100 dark:from-background dark:to-slate-900 py-8 px-4">
       <div className="max-w-lg mx-auto pb-8">
@@ -27,4 +31,3 @@ const Index = () => {
 };
 
 export default Index;
-
