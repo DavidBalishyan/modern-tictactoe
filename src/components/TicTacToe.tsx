@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import GameBoard from './GameBoard';
 import GameStatus from './GameStatus';
@@ -22,7 +21,7 @@ const TicTacToe: React.FC = () => {
     [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
     [0, 4, 8], [2, 4, 6]             // diagonals
   ];
-
+  
   const checkWinner = (currentBoard: (string | null)[]) => {
     for (const combination of WINNING_COMBINATIONS) {
       const [a, b, c] = combination;
